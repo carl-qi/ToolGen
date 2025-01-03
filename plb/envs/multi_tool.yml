@@ -1,0 +1,118 @@
+SIMULATOR:
+  E: 10000.
+  n_particles: 30000
+  quality_multiplier: 1.0
+  yield_stress: 100.
+  ground_friction: 5.
+  gravity: (0, -20, 0)
+  quality: 2
+  dtype: float32
+  lower_bound: 1.
+SHAPES:
+  - shape: box
+    width: (0.2, 0.15, 0.2)
+    init_pos: (0.5, 0.08, 0.5)
+PRIMITIVES:
+  - shape: Spoon
+    r: 0.03
+    h: 0.01
+    t: 0.005
+    init_pos: (0.2, 0.3, 0.2)
+    init_rot: (0.707, 0.707, 0.0, 0.0)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 5.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.1, 0.1, 0.1)
+    pcl_path: 'plb/envs/tool_pcls/multi_tool/0_small_spoon.npy'
+
+  - shape: Spoon
+    r: 0.04
+    h: 0.01
+    t: 0.005
+    init_pos: (0.35, 0.3, 0.2)
+    init_rot: (0.707, 0.707, 0.0, 0.0)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 5.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.1, 0.1, 0.1)
+    pcl_path: 'plb/envs/tool_pcls/multi_tool/1_large_spoon.npy'
+
+  - shape: Capsule
+    h: 0.12
+    r: 0.03
+    init_pos: (0.5, 0.3, 0.2)
+    init_rot: (0., 0., 0., 1.)
+    lower_bound: (0., 0.05, 0.)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 0.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.01, 0.01, 0.01)
+    pcl_path: 'plb/envs/tool_pcls/multi_tool/2_large_capsule.npy'
+
+  - shape: Capsule
+    h: 0.12
+    r: 0.02
+    init_pos: (0.65, 0.3, 0.2)
+    init_rot: (0., 0., 0., 1.)
+    lower_bound: (0., 0.05, 0.)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 0.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.01, 0.01, 0.01)
+    pcl_path: 'plb/envs/tool_pcls/multi_tool/3_small_capsule.npy'
+
+  - shape: Knife
+    h: (0.1, 0.1)
+    size: (0.025, 0.1, 0.06)
+    prot: (0., 0., 0., 1.)
+    init_pos: (0.8, 0.3, 0.2)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 0.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.01, 0.01, 0.01)
+    pcl_path: 'plb/envs/tool_pcls/multi_tool/4_knife.npy'
+
+
+  # - shape: TestTool
+  #   init_pos: (0.5, 0.3, 0.5)
+  #   color: (0.7568, 0.6039, 0.4196)
+  #   friction: 0.
+  #   action:
+  #     dim: 3
+  #     scale: (0.015, 0.015, 0.015)
+  # - shape: Knife
+  #   h: (0.1, 0.1)
+  #   size: (0.025, 0.1, 0.06)
+  #   prot: (1.0, 0.0, 0.0, 0.58)
+  #   init_pos: (0.5, 0.3, 0.5)
+  #   color: (0.7568, 0.6039, 0.4196)
+  #   friction: 0.
+  #   action:
+  #     dim: 3
+  #     scale: (0.015, 0.015, 0.015)
+
+ENV:
+  cached_state_path: datasets/1025_multitool
+  pcl_dir_path: plb/envs/tool_pcls/multi_tool
+
+RENDERER:
+  name: tina
+  image_res: (512, 512)
+
+  cam_center: (0.52, 0.3, 0.6)
+  cam_theta: 0.
+  cam_phi: -0.9
+  cam_radius: 0.53
+
+  #cam_center: (0.5, 0.3, 0.5)
+  #cam_theta: 1.57
+  #cam_phi: 0.
+  #cam_radius: 0.75
+
+  use_directional_light: True
+  light_direction: (0., 1., 1.)

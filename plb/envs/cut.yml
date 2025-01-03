@@ -1,0 +1,71 @@
+SIMULATOR:
+  E: 10000.
+  n_particles: 30000
+  quality_multiplier: 1.0
+  yield_stress: 100.
+  ground_friction: 5.
+  gravity: (0, -20, 0)
+  quality: 2
+  dtype: float32
+  lower_bound: 1.
+SHAPES:
+  - shape: box
+    width: (0.2, 0.15, 0.2)
+    init_pos: (0.5, 0.08, 0.5)
+PRIMITIVES:
+  - shape: TestTool
+    init_pos: (0.2, 0.3, 0.3)
+    init_rot: (1., 0.0, 0.0, 0.0)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 5.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.1, 0.1, 0.1)
+    pcl_path: 'plb/envs/tool_pcls/cut/0_knife1.npy'
+    obj_path: 'assets/knife/knife1.obj'
+  - shape: TestTool
+    init_pos: (0.5, 0.3, 0.3)
+    init_rot: (1., 0.0, 0.0, 0.0)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 5.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.1, 0.1, 0.1)
+    pcl_path: 'plb/envs/tool_pcls/cut/1_knife2.npy'
+    obj_path: 'assets/knife/knife2.obj'
+  - shape: TestTool
+    init_pos: (0.8, 0.3, 0.3)
+    init_rot: (1., 0.0, 0.0, 0.0)
+    color: (0.7568, 0.6039, 0.4196)
+    friction: 5.
+    action:
+      dim: 6
+      scale: (0.01, 0.01, 0.01, 0.1, 0.1, 0.1)
+    pcl_path: 'plb/envs/tool_pcls/cut/2_knife3.npy'
+    obj_path: 'assets/knife/knife3.obj'
+
+
+ENV:
+  cached_state_path: datasets/1025_multitool
+  pcl_dir_path: plb/envs/tool_pcls/cut
+
+RENDERER:
+  name: tina
+  image_res: (512, 512)
+
+  cam_center: (0.52, 0.3, 0.6)
+  cam_theta: 0.
+  cam_phi: -0.9
+  cam_radius: 0.53
+# RENDERER:
+#   name: plb
+#   camera_pos: (0.5, 2., 1.2)
+#   camera_rot: (1.3, 0.)
+#   use_directional_light: True
+  #cam_center: (0.5, 0.3, 0.5)
+  #cam_theta: 1.57
+  #cam_phi: 0.
+  #cam_radius: 0.75
+
+  use_directional_light: True
+  light_direction: (0., 1., 1.)
