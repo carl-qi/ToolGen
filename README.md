@@ -58,5 +58,5 @@ Xingyu Lin*, Carl Qi*, Yunchu Zhang, Zhiao Huang, Katerina Fragkiadaki, Yunzhu L
 
 Carl Qi, Xingyu Lin, David Held
 
-[Website](https://sites.google.com/view/dough-manipulation) /  [Paper](https://arxiv.org/pdf/2207.04638) [Code](https://github.com/carl-qi/diff_reset)
+[Website](https://sites.google.com/view/dough-manipulation) /  [Paper](https://arxiv.org/pdf/2207.04638) / [Code](https://github.com/carl-qi/diff_reset)
 
