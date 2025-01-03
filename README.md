@@ -46,3 +46,17 @@ If you find this codebase useful in your research, please consider citing:
   keywords={Point cloud compression;Deformable models;Shape;Autonomous systems;Affordances;Data models;Cleaning;Trajectory;Intelligent robots},
   doi={10.1109/IROS58592.2024.10801653}}
 ```
+
+## Related Works
+(CoRL 2022) Planning with Spatial-Temporal Abstraction from Point Clouds for Deformable Object Manipulation
+
+Xingyu Lin*, Carl Qi*, Yunchu Zhang, Zhiao Huang, Katerina Fragkiadaki, Yunzhu Li, Chuang Gan, David Held
+
+[Website](https://sites.google.com/view/pasta-plan) /  [Paper](https://arxiv.org/abs/2210.15751) / [Code](https://github.com/Xingyu-Lin/PASTA)
+
+(RA-L 2022) Learning Closed-loop Dough Manipulation Using a Differentiable Reset Module
+
+Carl Qi, Xingyu Lin, David Held
+
+[Website](https://sites.google.com/view/dough-manipulation) /  [Paper](https://arxiv.org/pdf/2207.04638) [Code](https://github.com/carl-qi/diff_reset)
+
