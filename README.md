@@ -35,7 +35,7 @@ The training data from the ToolGen paper will be released soon, stay tuned!
 If you find this codebase useful in your research, please consider citing:
 
 ```
-@INPROCEEDINGS{qi2022toolgen,
+@INPROCEEDINGS{qi2024toolgen,
   author={Qi, Carl and Wu, Yilin and Yu, Lifan and Liu, Haoyue and Jiang, Bowen and Lin, Xingyu and Held, David},
   booktitle={2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
   title={Learning Generalizable Tool-use Skills through Trajectory Generation}, 
